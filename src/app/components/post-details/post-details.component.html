@@ -1,0 +1,10 @@
+<mat-card *ngIf="post$ | async as post">
+    <mat-card-title>
+        {{ post.title }}
+    </mat-card-title>
+    <mat-card-content>
+        {{ post.body }}
+        <a mat-raised-button routerLink="./child">Load Child Route</a>
+        <router-outlet></router-outlet>
+    </mat-card-content>
+</mat-card>
